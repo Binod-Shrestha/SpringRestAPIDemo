@@ -7,27 +7,27 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "student")
 public class Student {
     @Id
-    private long id;
+    private String id;
     private String name;
-    private double age;
+    private int age;
     private int grade;
     private boolean active;
 
     public Student() {
     }
 
-    public Student(String name, double age, int grade, boolean active) {
+    public Student(String name, int age, int grade) {
         this.name = name;
         this.age = age;
         this.grade = grade;
-        this.active = active;
+
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -39,11 +39,11 @@ public class Student {
         this.name = name;
     }
 
-    public double getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(double age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
